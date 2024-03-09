@@ -1,11 +1,11 @@
 class Inst extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({ mode: 'open' }); // Good practice for encapsulation
+        this.attachShadow({ mode: 'open' });
     }
 
     connectedCallback() {
-        //
+        // Connected logic here (if necessary)
     }
 
     openInstagramAuthPopup() {
@@ -19,13 +19,13 @@ class Inst extends HTMLElement {
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        // Implementation depends on which attributes you want to observe
-        this.openInstagramAuthPopup();
+        if (name === "click") {
+            this.openInstagramAuthPopup();
+        }
     }
 
     static get observedAttributes() {
-        // Return an array of attribute names to observe
-        return ['click']; 
+        return ['click'];
     }
 }
 
