@@ -5,7 +5,7 @@ class Inst extends HTMLElement {
     }
 
     connectedCallback() {
-        // Create a button element, not paragraph
+        //
     }
 
     openInstagramAuthPopup() {
